@@ -17,7 +17,7 @@ def success(root, email1):
         pass
 
     s = f'select type from users where email="{email1}"'
-    mycon = sql.connect(host='localhost', user='root',
+    mycon = sql.connect(host='localhost', user='root@localhost',
                         passwd=user_pwd, database='mydb')
     cur = mycon.cursor()
     cur.execute(s)
@@ -34,7 +34,7 @@ def success(root, email1):
 
 
 def submit(root):
-    mycon = sql.connect(host='localhost', user='root',
+    mycon = sql.connect(host='localhost', user='root@localhost',
                         passwd=user_pwd, database='mydb')
     cur = mycon.cursor()
     cur.execute('select *from log')

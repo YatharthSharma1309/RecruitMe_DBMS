@@ -9,7 +9,7 @@ from modules.creds import user_pwd
 def get_details(email):
     global name, company, gen, recid
     q = f'select RName,CompanyName,RGender,RID from mydb.recruiter where REmail="{email}"'
-    mycon = sql.connect(host='localhost', user='root',
+    mycon = sql.connect(host='localhost', user='root@localhost',
                         passwd=user_pwd, database='mydb')
     cur = mycon.cursor()
     cur.execute(q)
